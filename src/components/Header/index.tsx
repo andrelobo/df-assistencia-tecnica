@@ -57,12 +57,14 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/logo.png"
-                  alt="logo"
-                  width={478}
-                  height={56}
-                  className="w-full dark:hidden"
-                />
+                    src="/images/logo/logo.png"
+                    alt="logo"
+                    width={478} // Defina o valor desejado em pixels para a largura do logo
+                    height={56}// A altura será ajustada automaticamente proporcionalmente à largura
+                    className="w-full dark:hidden"
+                  />
+
+
                 <Image
                   src="/images/logo/logo.png"
                   alt="logo"
