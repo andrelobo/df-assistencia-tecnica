@@ -22,50 +22,8 @@ const AboutSectionOne = () => {
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
-                title="DF Assistência Técnica  Conectando Confiança, Reparando Experiências."
-                paragraph="Bem-vindo à DF Assistência Técnica! Somos especialistas em smartphones e estamos aqui 
-                para oferecer soluções rápidas e confiáveis. Precisa de um reparo ou suporte? Conte conosco! "
-                mb="44px"
-              />
-
-              <div
-                className="mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
-                <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Reparos Rápidos" />
-                    <List text="Soluções de Software" />
-                    <List text="Manutenção e Limpeza" />
-                  </div>
-
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Recuperação de Dados" />
-                    <List text="Desbloqueio e Configuração:" />
-                    <List text="Aparelhos para Venda" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
-                <Image
-                  src="/images/about/about-image.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
-                />
-                <Image
-                  src="/images/about/about-image-dark.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                />
-              </div>
-            </div>
+            
+            
           </div>
         </div>
       </div>
