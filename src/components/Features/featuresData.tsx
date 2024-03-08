@@ -72,9 +72,9 @@ const featuresData: Feature[] = [
         <rect width="28" height="28" rx="1" />
       </svg>
     ),
-    title: "Fully Customizable",
+    title: "Consultoria em Tecnologia",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "Tecnologia de ponta para garantir o melhor desempenho dos seus dispositivos, com a ajuda de nossos especialistas. Desenvolvimento de soluções de ponta.",
   },
   {
     id: 1,
@@ -87,9 +87,9 @@ const featuresData: Feature[] = [
         <path d="M18.9474 32.6316C18.9474 35.4705 19.8099 38.0969 21.2941 40.2796C21.7904 41.0094 21.3054 42.1053 20.4229 42.1053H4.21053C1.87368 42.1053 0 40.2316 0 37.8947V4.21053C0 1.89474 1.87368 0 4.21053 0H6.31579H16.8421H29.4737C31.7895 0 33.6842 1.87368 33.6842 4.21053V17.9544C33.6842 18.5032 33.1804 18.9474 32.6316 18.9474C25.0737 18.9474 18.9474 25.0737 18.9474 32.6316Z" />
       </svg>
     ),
-    title: "Free and Open-Source",
+    title: "Configuração e Manutenção de Sistemas de Backup",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "Os técnicos podem configurar e gerenciar sistemas de backup automatizados, tanto locais quanto em nuvem, para garantir que os dados importantes estejam protegidos contra perda devido a falhas de hardware, corrupção de dados, ataques de malware ou outros incidentes",
   },
 ];
 export default featuresData;
