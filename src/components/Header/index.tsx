@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -7,41 +6,37 @@ import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
 const Header = () => {
-  // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [sticky, setSticky] = useState(false);
+  const [openIndex, setOpenIndex] = useState(-1);
+  const usePathName = usePathname();
+
+  useEffect(() => {
+    const handleStickyNavbar = () => {
+      if (window.scrollY >= 80) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleStickyNavbar);
+    return () => {
+      window.removeEventListener("scroll", handleStickyNavbar);
+    };
+  }, []);
+
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
 
-  // Sticky Navbar
-  const [sticky, setSticky] = useState(false);
-  const handleStickyNavbar = () => {
-    if (window.scrollY >= 80) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleStickyNavbar);
-  });
-
-  // submenu handler
-  const [openIndex, setOpenIndex] = useState(-1);
   const handleSubmenu = (index) => {
-    if (openIndex === index) {
-      setOpenIndex(-1);
-    } else {
-      setOpenIndex(index);
-    }
+    setOpenIndex((prevIndex) => (prevIndex === index ? -1 : index));
   };
-
-  const usePathName = usePathname();
 
   return (
     <>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center ${
+         className={`header left-0 top-0 z-40 flex w-full items-center ${
           sticky
             ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
             : "absolute bg-transparent"
@@ -49,21 +44,15 @@ const Header = () => {
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-80 max-w-full px-4 xl:mr-12">
-              <Link
-                href="/"
-                className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
-                } `}
-              >
+            <div className="w-full max-w-[400px] px-4 xl:mr-12">
+              <Link href="/" className={`header-logo block ${sticky ? "py-5 lg:py-2" : "py-8"}`}>
                 <Image
-                    src="/images/logo/logo.png"
-                    alt="logo"
-                    width={478} // Defina o valor desejado em pixels para a largura do logo
-                    height={56}// A altura será ajustada automaticamente proporcionalmente à largura
-                    className="w-full dark:hidden"
-                  />
-
+                  src="/images/logo/logo.png"
+                  alt="logo"
+                  width={478} // Largura original
+                  height={56}
+                  className="w-full dark:hidden"
+                />
 
                 <Image
                   src="/images/logo/logo.png"

@@ -11,9 +11,7 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  DF Assistência Técnica
-                </h1>
+                
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                 Na DF Assistência Técnica, oferecemos uma gama abrangente de serviços para garantir que seus smartphones estejam sempre 
                 operando no seu melhor. Desde reparos especializados até a substituição de peças.
