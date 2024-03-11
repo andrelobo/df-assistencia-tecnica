@@ -44,7 +44,7 @@ const Header = () => {
           <div className="w-full max-w-[400px] px-4 xl:mr-12">
             <Link href="/" className={`header-logo block ${sticky ? "py-5 lg:py-2" : "py-8"}`}>
               <Image
-                src="/images/logo/logo.png"
+                src="/images/logo/logo-2.png"
                 alt="logo"
                 width={478}
                 height={56}
