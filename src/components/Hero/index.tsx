@@ -10,7 +10,8 @@ const Hero = () => {
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="mx-auto max-w-[800px] text-center">
+              <div className="mx-auto max-w-[500px] text-center">
+              <img src="/images/hero/smartphone.jpg" alt="Descrição da imagem" className="mx-auto mb-4" />
                 
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                 Na DF Assistência Técnica, oferecemos uma gama abrangente de serviços para garantir que seus smartphones estejam sempre 

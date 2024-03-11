@@ -29,11 +29,12 @@ const Header = () => {
   };
 
   const getMenuLinkClasses = (path) => {
-    return `flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
-      path === window.location.pathname
-        ? "text-primary dark:text-white"
-        : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
-    }`;
+    // Verifica se window está definido para evitar o erro durante a compilação
+    if (typeof window !== 'undefined' && window.location.pathname === path) {
+      return "flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 text-primary dark:text-white";
+    } else {
+      return "flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 text-dark hover:text-primary dark:text-white/70 dark:hover:text-white";
+    }
   };
 
   return (
