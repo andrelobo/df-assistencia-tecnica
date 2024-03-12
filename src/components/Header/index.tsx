@@ -41,7 +41,7 @@ const Header = () => {
     <header className={`header left-0 top-0 z-40 flex w-full items-center ${sticky ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition" : "absolute bg-transparent"}`}>
       <div className="container">
         <div className="relative -mx-4 flex items-center justify-between">
-          <div className="w-full max-w-[400px] px-4 xl:mr-12">
+          <div className="w-full max-w-[300px] px-4 xl:mr-12">
             <Link href="/" className={`header-logo block ${sticky ? "py-5 lg:py-2" : "py-8"}`}>
               <Image
                 src="/images/logo/logo.png"

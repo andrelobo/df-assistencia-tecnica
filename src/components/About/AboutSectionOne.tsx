@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SectionTitle from "../Common/SectionTitle";
+import SectionTitle from "../Common/SectionTitle"; // Adicionado
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -17,9 +17,20 @@ const AboutSectionOne = () => {
     </p>
   );
 
+  // Texto sobre a DF Assistência Técnica limitado a 900 caracteres
+  const aboutText = "DF Assistência Técnica é uma empresa dedicada a oferecer soluções completas em assistência técnica para eletrônicos, incluindo reparo de smartphones, tablets, computadores e outros dispositivos. Nossa equipe altamente qualificada e experiente garante um serviço rápido, eficiente e confiável. Priorizamos a satisfação do cliente e buscamos sempre superar as expectativas, fornecendo atendimento personalizado e soluções sob medida para cada necessidade. Com uma ampla gama de serviços, incluindo diagnóstico, reparo, manutenção preventiva e suporte técnico, estamos preparados para atender tanto a clientes residenciais quanto a empresas de todos os portes. Conte conosco para manter seus dispositivos funcionando perfeitamente e prolongar sua vida útil. Confie na DF Assistência Técnica para cuidar do seu equipamento com a qualidade e a dedicação que ele merece.";
+
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
-     
+      <div className="max-w-2xl mx-auto">
+        <SectionTitle
+          title="Sobre a DF Assistência Técnica"
+          subtitle="Conheça nossa empresa"
+        />
+        <p className="text-lg text-body-color mt-6 lg:w-full">
+          {aboutText}
+        </p>
+      </div>
     </section>
   );
 };
