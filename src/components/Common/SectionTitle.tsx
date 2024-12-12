@@ -1,35 +1,33 @@
-const SectionTitle = ({
+type SectionTitleProps = {
+  title: string;
+  subtitle?: string; // Adicione a propriedade subtitle como opcional
+  paragraph?: string;
+  width?: string;
+  center?: boolean;
+  mb?: string;
+};
+
+const SectionTitle: React.FC<SectionTitleProps> = ({
   title,
-  subtitle, // Adicione o subtitle aqui
+  subtitle, // Adicione subtitle aqui
   paragraph,
   width = "570px",
   center,
   mb = "100px",
-}: {
-  title: string;
-  subtitle?: string; // Marque subtitle como opcional
-  paragraph?: string; // Mantenha paragraph opcional, caso necessário
-  width?: string;
-  center?: boolean;
-  mb?: string;
 }) => {
   return (
     <div
       className={`w-full ${center ? "mx-auto text-center" : ""}`}
       style={{ maxWidth: width, marginBottom: mb }}
     >
-      <h2 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
+      <h2 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[45px]">
         {title}
       </h2>
-      {subtitle && ( // Renderize o subtitle, se fornecido
-        <h3 className="mb-2 text-xl font-semibold text-gray-600 dark:text-gray-300">
-          {subtitle}
-        </h3>
+      {subtitle && ( // Renderize o subtitle se ele existir
+        <h3 className="text-xl font-medium text-gray-600">{subtitle}</h3>
       )}
-      {paragraph && ( // Renderize o paragraph, se fornecido
-        <p className="text-base !leading-relaxed text-body-color md:text-lg">
-          {paragraph}
-        </p>
+      {paragraph && (
+        <p className="text-base text-body-color md:text-lg">{paragraph}</p>
       )}
     </div>
   );
