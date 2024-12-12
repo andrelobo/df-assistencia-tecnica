@@ -1,28 +1,36 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "baseUrl": ".",
+    "lib": ["dom", "dom.iterable", "esnext"], // Suporte para APIs modernas
+    "baseUrl": ".", // Define o diretório base para resolução de módulos
     "paths": {
-			"@/*": ["./src/*"]
-		},
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "incremental": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
+      "@/*": ["./src/*"] // Atalhos para importar arquivos da pasta src
+    },
+    "allowJs": true, // Permite arquivos JavaScript no projeto
+    "skipLibCheck": true, // Ignora verificação de tipos em bibliotecas externas
+    "strict": false, // Desabilita verificações estritas de tipos
+    "forceConsistentCasingInFileNames": true, // Garante nomes de arquivos consistentes
+    "noEmit": true, // Não emite arquivos na compilação
+    "incremental": true, // Habilita builds incrementais para maior desempenho
+    "esModuleInterop": true, // Suporte à interoperabilidade com ES Modules
+    "module": "esnext", // Define o sistema de módulos como ESNext
+    "moduleResolution": "node", // Resolve módulos no estilo Node.js
+    "resolveJsonModule": true, // Permite importar arquivos JSON como módulos
+    "isolatedModules": true, // Exige que cada arquivo seja tratado como módulo independente
+    "jsx": "preserve", // Preserva o JSX para processamento posterior
+    "types": ["node"], // Inclui definições de tipos do Node.js
     "plugins": [
       {
-        "name": "next"
+        "name": "next" // Plugin Next.js para melhor integração
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts", // Tipos globais do Next.js
+    ".next/types/**/*.ts", // Tipos gerados pelo Next.js
+    "**/*.ts", // Inclui todos os arquivos TypeScript
+    "**/*.tsx" // Inclui todos os arquivos TypeScript com JSX
+  ],
+  "exclude": [
+    "node_modules" // Exclui dependências externas
+  ]
 }
